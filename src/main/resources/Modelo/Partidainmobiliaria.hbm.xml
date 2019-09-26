@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Partidainmobiliaria" table="partidainmobiliaria" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="nroPartida" type="string">
+            <column name="nroPartida" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="latitud" type="string">
+            <column name="latitud" length="15" not-null="true" />
+        </property>
+        <property name="longitud" type="string">
+            <column name="longitud" length="15" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

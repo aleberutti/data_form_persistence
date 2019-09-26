@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Planta" table="planta" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="idPlanta" type="java.lang.Integer">
+            <column name="idPlanta" />
+            <generator class="identity" />
+        </id>
+        <property name="cuit" type="long">
+            <column name="cuit" not-null="true" />
+        </property>
+        <property name="fueraProv" type="boolean">
+            <column name="fueraProv" not-null="true" />
+        </property>
+        <property name="superficieDeposito" type="java.lang.Double">
+            <column name="superficieDeposito" precision="22" scale="0" />
+        </property>
+        <property name="superficieTotalM2" type="double">
+            <column name="superficieTotalM2" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="superficieCubiertaM2" type="double">
+            <column name="superficieCubiertaM2" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="potenciaInstaladaHp" type="double">
+            <column name="potenciaInstaladaHP" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="dotacionDePersonal" type="int">
+            <column name="dotacionDePersonal" not-null="true" />
+        </property>
+        <property name="fechaInicioActividades" type="date">
+            <column name="fechaInicioActividades" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

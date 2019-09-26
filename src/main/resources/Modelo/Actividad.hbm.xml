@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Actividad" table="actividad" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="cuacm" type="int">
+            <column name="cuacm" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreActividad" type="string">
+            <column name="nombreActividad" length="100" not-null="true" />
+        </property>
+        <property name="estandar" type="int">
+            <column name="estandar" not-null="true" />
+        </property>
+        <property name="grupo" type="char">
+            <column name="grupo" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

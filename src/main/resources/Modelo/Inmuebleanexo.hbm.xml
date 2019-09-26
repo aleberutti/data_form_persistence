@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Inmuebleanexo" table="inmuebleanexo" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="idInmueble" type="java.lang.Integer">
+            <column name="idInmueble" />
+            <generator class="identity" />
+        </id>
+        <property name="domicilio" type="string">
+            <column name="domicilio" length="100" not-null="true" />
+        </property>
+        <property name="actividad" type="string">
+            <column name="actividad" length="100" not-null="true" />
+        </property>
+        <property name="idPlanta" type="int">
+            <column name="idPlanta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

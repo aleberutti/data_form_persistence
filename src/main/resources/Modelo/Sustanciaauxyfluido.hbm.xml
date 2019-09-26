@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Sustanciaauxyfluido" table="sustanciaauxyfluido" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="idSustanciasAux" type="java.lang.Integer">
+            <column name="idSustanciasAux" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" not-null="true" />
+        </property>
+        <property name="consumoAnual" type="double">
+            <column name="consumoAnual" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="unidad" type="string">
+            <column name="unidad" length="10" not-null="true" />
+        </property>
+        <property name="almacenamiento" type="string">
+            <column name="almacenamiento" length="50" not-null="true" />
+        </property>
+        <property name="idPlanta" type="int">
+            <column name="idPlanta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

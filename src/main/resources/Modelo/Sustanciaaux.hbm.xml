@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Sustanciaaux" table="sustanciaaux" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="idSustancias" type="java.lang.Integer">
+            <column name="idSustancias" />
+            <generator class="identity" />
+        </id>
+        <property name="combustiblesLiquidos" type="boolean">
+            <column name="combustiblesLiquidos" not-null="true" />
+        </property>
+        <property name="aireComprimido" type="boolean">
+            <column name="aireComprimido" not-null="true" />
+        </property>
+        <property name="gasNatural" type="boolean">
+            <column name="gasNatural" not-null="true" />
+        </property>
+        <property name="aceitesYlubricantes" type="boolean">
+            <column name="aceitesYLubricantes" not-null="true" />
+        </property>
+        <property name="idPlanta" type="int">
+            <column name="idPlanta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
