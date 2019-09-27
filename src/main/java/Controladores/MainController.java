@@ -21,11 +21,13 @@ public class MainController {
     
     //Se declaran todos los controladores que se necesitan para persistir todos los datos
     private static FormController formcontroller;
+    private static CompanyController companycontroller;
     
     //Public empty constructor
     public MainController(){
         //Se instancian todos los controladores necesarios para la persistencia de todos los datos
         this.formcontroller = FormController.getInstance();
+        this.companycontroller = new CompanyController();
     }
     //getInstance del patrón singleton
     public static synchronized MainController getInstance(){
@@ -44,6 +46,8 @@ public class MainController {
                 formcontroller.loadXML();
                 System.out.println(path);
                 //ACÁ SE TIENEN QUE LLAMAR AL MÉTODO instantiate() DE CADA CONTROLADOR
+                companycontroller.instantiate();
+                
                 
             } catch (Exception ex) {
                 Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
