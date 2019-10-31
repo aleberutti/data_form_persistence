@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Tanque" table="tanque" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="idTanque" type="java.lang.Integer">
+            <column name="idTanque" />
+            <generator class="identity" />
+        </id>
+        <property name="cantidad" type="int">
+            <column name="cantidad" not-null="true" />
+        </property>
+        <property name="capacidadTotal" type="double">
+            <column name="capacidadTotal" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="unidad" type="string">
+            <column name="unidad" length="2" not-null="true" />
+        </property>
+        <property name="idPlanta" type="int">
+            <column name="idPlanta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Riesgopresunto" table="riesgopresunto" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="idRiesgoPresunto" type="java.lang.Integer">
+            <column name="idRiesgoPresunto" />
+            <generator class="identity" />
+        </id>
+        <property name="fuentesMoviles" type="boolean">
+            <column name="fuentesMoviles" not-null="true" />
+        </property>
+        <property name="aparatosSometidos" type="boolean">
+            <column name="aparatosSometidos" not-null="true" />
+        </property>
+        <property name="sustanciasQuimicas" type="boolean">
+            <column name="sustanciasQuimicas" not-null="true" />
+        </property>
+        <property name="explosion" type="boolean">
+            <column name="explosion" not-null="true" />
+        </property>
+        <property name="incendio" type="boolean">
+            <column name="incendio" not-null="true" />
+        </property>
+        <property name="otro" type="boolean">
+            <column name="otro" not-null="true" />
+        </property>
+        <property name="observaciones" type="string">
+            <column name="observaciones" length="200" not-null="true" />
+        </property>
+        <property name="idPlanta" type="int">
+            <column name="idPlanta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

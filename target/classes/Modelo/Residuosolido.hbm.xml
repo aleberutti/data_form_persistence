@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Residuosolido" table="residuosolido" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="idResiduoSolido" type="java.lang.Integer">
+            <column name="idResiduoSolido" />
+            <generator class="identity" />
+        </id>
+        <property name="residuo" type="string">
+            <column name="residuo" length="150" not-null="true" />
+        </property>
+        <property name="cantidad" type="double">
+            <column name="cantidad" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="unidad" type="string">
+            <column name="unidad" length="10" not-null="true" />
+        </property>
+        <property name="periodo" type="string">
+            <column name="periodo" length="10" not-null="true" />
+        </property>
+        <property name="procesoGenerador" type="string">
+            <column name="procesoGenerador" length="50" not-null="true" />
+        </property>
+        <property name="gestion" type="string">
+            <column name="gestion" length="200" not-null="true" />
+        </property>
+        <property name="idPlanta" type="int">
+            <column name="idPlanta" not-null="true" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

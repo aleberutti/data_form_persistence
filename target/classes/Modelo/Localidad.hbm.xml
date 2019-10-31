@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Localidad" table="localidad" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreLocalidad" type="string">
+            <column name="nombre_localidad" length="50" not-null="true" />
+        </property>
+        <property name="idDepartamento" type="int">
+            <column name="id_departamento" not-null="true" />
+        </property>
+        <property name="idNodo" type="int">
+            <column name="id_nodo" not-null="true" />
+        </property>
+        <property name="categoria" type="string">
+            <column name="categoria" length="50" not-null="true" />
+        </property>
+        <property name="codigoPostal" type="string">
+            <column name="codigo_postal" length="8" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

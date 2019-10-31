@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-sep-2019 10:58:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Domicilio" table="domicilio" catalog="mma_data_sf_bd" optimistic-lock="version">
+        <composite-id name="id" class="Modelo.DomicilioId">
+            <key-property name="tipo" type="string">
+                <column name="tipo" length="20" />
+            </key-property>
+            <key-property name="calle" type="string">
+                <column name="calle" length="50" />
+            </key-property>
+            <key-property name="numero" type="string">
+                <column name="numero" length="6" />
+            </key-property>
+        </composite-id>
+        <property name="cuit" type="long">
+            <column name="cuit" not-null="true" />
+        </property>
+        <property name="piso" type="java.lang.Integer">
+            <column name="piso" />
+        </property>
+        <property name="depto" type="string">
+            <column name="depto" length="6" />
+        </property>
+        <property name="localidad" type="int">
+            <column name="localidad" not-null="true" />
+        </property>
+        <property name="telefono" type="int">
+            <column name="telefono" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" not-null="true" />
+        </property>
+        <property name="zonificacion" type="string">
+            <column name="zonificacion" length="50" not-null="true" />
+        </property>
+        <property name="idPlanta" type="java.lang.Integer">
+            <column name="idPlanta" />
+        </property>
+        <property name="nroPartida" type="string">
+            <column name="nroPartida" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
